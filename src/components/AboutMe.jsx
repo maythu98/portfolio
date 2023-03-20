@@ -18,9 +18,9 @@ export default function AboutMe() {
     { name: "Bootstrap" },
   ];
   return (
-    <div className="my-20 grid grid-cols-2" id="home">
-      <div className="flex justify-center">
-        <img src={me} alt="May Thu Aung" width={"60%"} />
+    <div className="my-20 grid md:grid-cols-2" id="home">
+      <div className="flex justify-center hidden md:block">
+        <img src={me} alt="May Thu Aung" width={"60%"} className="w-[60%]" />
       </div>
       <div>
         <Header>May Thu Aung</Header>
