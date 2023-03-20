@@ -9,17 +9,17 @@ export default function ProjectBox({
   return (
     <div className="flex flex-col md:flex-row mt-5">
       {position === "right" && (
-        <div className="project-box flex-auto w-full md:w-[60%]">
+        <div className="project-box flex-auto flex items-center justify-center w-full md:w-[60%]">
           <img src={image} alt={title} />
         </div>
       )}
 
       <div className="p-10 flex-auto md:w-[40%]">
         <ProjectTitle>{title}</ProjectTitle>
-        <p className="project-desc text-desc">{children}</p>
+        <div>{children}</div>
       </div>
       {position === "left" && (
-        <div className="project-box flex-auto md:w-[60%]">
+        <div className="project-box flex-auto flex items-center justify-center md:w-[60%]">
           <img src={image} alt={title} />
         </div>
       )}
