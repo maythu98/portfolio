@@ -1,12 +1,22 @@
 import React from "react";
 import Header from "./Header";
 import php from "../assets/images/php.png";
-import laravel from "../assets/images/laravel.png";
-import react from "../assets/images/react.png";
+import laravel from "../assets/images/laravel-.png";
+import react from "../assets/images/react-js.png";
 import next from "../assets/images/next.png";
 import me from "../assets/images/sitting.png";
+import Skill from "./Skill";
 
 export default function AboutMe() {
+  const skills = [
+    { name: "PHP" },
+    { name: "Laravel" },
+    { name: "React.js" },
+    { name: "Next.js" },
+    { name: "HTML/CSS" },
+    { name: "Tailwind" },
+    { name: "Bootstrap" },
+  ];
   return (
     <div className="my-20 grid grid-cols-2" id="home">
       <div className="flex justify-center">
@@ -25,8 +35,13 @@ export default function AboutMe() {
             </h1>
 
             <div className="my-5">
-              <ul className="flex items-center space-x-8">
-                <li>
+              <div className="flex flex-wrap gap-4 items-center space-x-8">
+                {skills.map((skill) => (
+                  <Skill>{skill.name}</Skill>
+                ))}
+              </div>
+
+              {/* <li>
                   <img src={php} alt="PHP" width={50} height={50} />
                 </li>
                 <li>
@@ -37,8 +52,7 @@ export default function AboutMe() {
                 </li>
                 <li>
                   <img src={next} alt="Next.js" width={50} height={50} />
-                </li>
-              </ul>
+                </li> */}
             </div>
           </div>
         </div>

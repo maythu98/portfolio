@@ -1,17 +1,16 @@
 import React from "react";
-import pyoneplay from "../assets/images/pyoneplay.png";
 
-export default function ProjectBox({ position = "right" }) {
+export default function ProjectBox({ title, image, position = "right" }) {
   return (
     <div className="flex mt-5">
       {position === "right" && (
         <div className="project-box flex-auto w-[60%]">
-          <img src={pyoneplay} alt="Pyone Play" />
+          <img src={image} alt={title} />
         </div>
       )}
 
       <div className="p-10 flex-auto w-[40%]">
-        <ProjectTitle>Pyone Play</ProjectTitle>
+        <ProjectTitle>{title}</ProjectTitle>
         <p className="project-desc text-desc">
           UX research, design, and prototyping for the offline experience,
           customer app, and backend system.
@@ -19,7 +18,7 @@ export default function ProjectBox({ position = "right" }) {
       </div>
       {position === "left" && (
         <div className="project-box flex-auto w-[60%]">
-          <img src={pyoneplay} alt="Pyone Play" />
+          <img src={image} alt={title} />
         </div>
       )}
     </div>
