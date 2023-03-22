@@ -37,7 +37,7 @@ export default function AboutMe() {
             <div className="my-5">
               <div className="flex flex-wrap gap-4 items-center space-x-8">
                 {skills.map((skill) => (
-                  <Skill>{skill.name}</Skill>
+                  <Skill key={skill.name}>{skill.name}</Skill>
                 ))}
               </div>
 
