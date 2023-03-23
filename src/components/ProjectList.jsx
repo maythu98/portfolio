@@ -3,13 +3,15 @@ import Header from "./Header";
 import ProjectBox from "./ProjectBox";
 import Skill from "./Skill";
 import { db } from "../lib/firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 
 export default function ProjectList() {
   const [projects, setProjects] = useState([]);
 
   const getProjectData = async () => {
-    const projects = await getDocs(collection(db, "projects"));
+    const projects = await getDocs(
+      query(collection(db, "projects"), orderBy("order"))
+    );
     const newData = projects.docs.map((doc) => ({
       ...doc.data(),
       id: doc.id,
@@ -25,7 +27,7 @@ export default function ProjectList() {
     <div className="my-20" id="projects">
       <Header>Projects</Header>
       <div className="mt-10 flex flex-col gap-8">
-        {projects.length &&
+        {projects.length > 0 &&
           projects.map((item) => (
             <ProjectBox
               title={item.title}
