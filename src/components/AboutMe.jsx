@@ -1,14 +1,5 @@
-import {
-  collection,
-  getDocFromCache,
-  getDocs,
-  limit,
-  orderBy,
-  query,
-} from "firebase/firestore";
-import React, { useEffect } from "react";
+import React from "react";
 import profile1 from "../assets/images/profile.png";
-import { db } from "../lib/firebase";
 import Skill from "./Skill";
 import SubHeader from "./SubHeader";
 
@@ -25,15 +16,6 @@ export default function AboutMe() {
     { name: "Tailwind" },
     { name: "Bootstrap" },
   ];
-
-  const getProfile = async () => {
-    const { docs } = await getDocs(collection(db, "profile"));
-    console.log("Proife", docs[0].data());
-  };
-
-  useEffect(() => {
-    getProfile();
-  }, []);
 
   return (
     <div className="min-h-[80vh] grid md:grid-cols-2" id="home">
