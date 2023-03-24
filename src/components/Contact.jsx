@@ -31,7 +31,7 @@ export function ContactItem({ href, children }) {
   return (
     <a
       href={href}
-      className="p-7 bg-violet-100 text-white rounded w-[100px] hover:bg-violet-300 cursor-pointer"
+      className="p-2 md:p-7 bg-violet-100 text-white rounded w-[100px] hover:bg-violet-300 cursor-pointer"
     >
       {children}
     </a>

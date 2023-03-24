@@ -14,7 +14,7 @@ export default function ProjectBox({
         </div>
       )}
 
-      <div className="px-10 py-2 flex-auto flex flex-col justify-center md:w-[50%]">
+      <div className="px-0 md:px-10 py-2 flex-auto flex flex-col justify-center md:w-[50%]">
         <div className="flex justify-between">
           <ProjectTitle>{title}</ProjectTitle>
           <div className=""></div>
@@ -31,5 +31,5 @@ export default function ProjectBox({
 }
 
 export function ProjectTitle({ children }) {
-  return <h2 className="font-bold text-4xl">{children}</h2>;
+  return <h2 className="font-bold text-2xl md:text-4xl">{children}</h2>;
 }

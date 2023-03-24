@@ -4,7 +4,10 @@ export default function Navigation({ className, ...props }) {
   return (
     // layout-box-shadow
     <div className="">
-      <div {...props} className="container mx-auto flex justify-between my-16">
+      <div
+        {...props}
+        className="container mx-auto flex justify-between my-10 md:my-16"
+      >
         {/* <h1 className="font-bold text-xl uppercase">May</h1> */}
         <nav>
           <ul className="list-none flex space-x-8">

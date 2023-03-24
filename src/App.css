@@ -70,6 +70,6 @@
   }
 
   .skill {
-    @apply px-5 py-1 border-b-2 bg-[var(--color-main-primary05)] rounded-md border-[var(--color-main-primary2)] text-[var(--color-nav-color)] hover:border-[var(--color-main-primary)] hover:text-black;
+    @apply px-3 text-sm lg:text-base lg:px-5 py-1 border-b-2 bg-[var(--color-main-primary05)] rounded-md border-[var(--color-main-primary2)] text-[var(--color-nav-color)] hover:border-[var(--color-main-primary)] hover:text-black;
   }
 }

@@ -19,23 +19,20 @@ export default function AboutMe() {
 
   return (
     <div className="min-h-[80vh] grid md:grid-cols-2" id="home">
-      <div className="hidden md:flex md:justify-center">
-        <div className="flex justify-center items-center">
-          <div>
-            <img
-              src={profile1}
-              alt="May Thu Aung"
-              width={"100%"}
-              className="w-[100%] bg-[#D0C9FE] rounded-full"
-            />
-          </div>
+      <div className="md:flex md:justify-center">
+        <div className="flex justify-center md:items-center lg:items-start xl:items-center ">
+          <img
+            src={profile1}
+            alt="May Thu Aung"
+            className="w-[50%] md:w-[60%] lg:w-[80%] xl:w-[100%] bg-[#D0C9FE] rounded-full"
+          />
         </div>
       </div>
 
       <div className="flex flex-col justify-center">
         <SubHeader>May Thu Aung</SubHeader>
         <div className="mt-5">
-          <h1 className="text-5xl font-bold text-left leading-relaxed font-[#0D0836]">
+          <h1 className="text-center md:text-left text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-left leading-relaxed font-[#0D0836]">
             A full stack developer with 3+ years of experience
           </h1>
 
