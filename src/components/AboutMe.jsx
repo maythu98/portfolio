@@ -1,12 +1,14 @@
-import React from "react";
-import Header from "./Header";
-import php from "../assets/images/php.png";
-import laravel from "../assets/images/laravel-.png";
-import react from "../assets/images/react-js.png";
-import next from "../assets/images/next.png";
-import me from "../assets/images/sitting.png";
-import profile1 from "../assets/images/profile1.png";
-
+import {
+  collection,
+  getDocFromCache,
+  getDocs,
+  limit,
+  orderBy,
+  query,
+} from "firebase/firestore";
+import React, { useEffect } from "react";
+import profile1 from "../assets/images/profile.png";
+import { db } from "../lib/firebase";
 import Skill from "./Skill";
 import SubHeader from "./SubHeader";
 
@@ -14,22 +16,35 @@ export default function AboutMe() {
   const skills = [
     { name: "PHP" },
     { name: "Laravel" },
+    { name: "MySQL" },
+    { name: "HTML/CSS" },
+    { name: "Javascript" },
     { name: "React.js" },
     { name: "Next.js" },
-    { name: "HTML/CSS" },
+    { name: "Typescript" },
     { name: "Tailwind" },
     { name: "Bootstrap" },
   ];
+
+  const getProfile = async () => {
+    const { docs } = await getDocs(collection(db, "profile"));
+    console.log("Proife", docs[0].data());
+  };
+
+  useEffect(() => {
+    getProfile();
+  }, []);
+
   return (
-    <div className="md:my-36 grid md:grid-cols-2" id="home">
-      <div className="hidden md:block">
+    <div className="min-h-[80vh] grid md:grid-cols-2" id="home">
+      <div className="hidden md:flex md:justify-center">
         <div className="flex justify-center items-center">
-          <div className="">
+          <div>
             <img
               src={profile1}
               alt="May Thu Aung"
               width={"100%"}
-              className="w-[100%] bg-[#D0C9FE] flex justify-center items-center rounded-full"
+              className="w-[100%] bg-[#D0C9FE] rounded-full"
             />
           </div>
         </div>
@@ -38,8 +53,8 @@ export default function AboutMe() {
       <div className="flex flex-col justify-center">
         <SubHeader>May Thu Aung</SubHeader>
         <div className="mt-5">
-          <h1 className="text-5xl font-bold text-left leading-10 font-[#0D0836]">
-            Full Stack Developer with 3+ yoe
+          <h1 className="text-5xl font-bold text-left leading-relaxed font-[#0D0836]">
+            A full stack developer with 3+ years of experience
           </h1>
 
           <div className="my-10">

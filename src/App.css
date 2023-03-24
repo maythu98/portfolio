@@ -6,9 +6,11 @@
 @layer base {
   :root {
     --color-main-primary: #624cfc;
-    --color-main-primary05: #efedff;
+    --color-main-primary05: #e6e3fe;
     --color-main-primary1: #e0dbfe;
-    --color-bg-primary: #f5f4fc;
+    --color-main-primary2: #c0b7fe;
+    --color-main-primary3: #a194fd;
+    --color-bg-primary: #efedfc;
     --color-bg-content: #0a0624;
     --color-body-color: #474747;
     --color-nav-color: #454354;
@@ -54,8 +56,8 @@
   }
 
   .project-box {
-    box-shadow: 0px 8px 6px -6px rgb(235 234 242 / 58%);
-    @apply p-5 relative rounded bg-violet-100;
+    box-shadow: 0px 8px 6px -6px rgba(211, 207, 238, 0.58);
+    @apply p-5 relative rounded bg-[var(--color-main-primary1)];
   }
 
   .text-desc {
@@ -68,6 +70,6 @@
   }
 
   .skill {
-    @apply px-5 py-1 border-b-2 border-[var(--color-main-primary1)] text-[var(--color-nav-color)] hover:border-[var(--color-main-primary)] hover:text-black;
+    @apply px-5 py-1 border-b-2 bg-[var(--color-main-primary05)] rounded-md border-[var(--color-main-primary2)] text-[var(--color-nav-color)] hover:border-[var(--color-main-primary)] hover:text-black;
   }
 }

@@ -15,11 +15,14 @@ export default function ProjectBox({
       )}
 
       <div className="px-10 py-2 flex-auto flex flex-col justify-center md:w-[50%]">
-        <ProjectTitle>{title}</ProjectTitle>
+        <div className="flex justify-between">
+          <ProjectTitle>{title}</ProjectTitle>
+          <div className=""></div>
+        </div>
         <div>{children}</div>
       </div>
       {position === "left" && (
-        <div className="project-box flex-auto flex items-center justify-center md:w-[60%]">
+        <div className="project-box flex-auto flex items-center justify-center md:w-[50%]">
           <img src={image} alt={title} />
         </div>
       )}
