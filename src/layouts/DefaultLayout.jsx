@@ -6,7 +6,7 @@ export default function DefaultLayout({ children }) {
   return (
     <div>
       <Navigation />
-      <div className="container md:w-[60%] mx-auto">{children}</div>
+      <div className="container md:w-[80%] mx-auto">{children}</div>
       <Footer />
     </div>
   );

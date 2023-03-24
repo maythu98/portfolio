@@ -5,7 +5,10 @@ import laravel from "../assets/images/laravel-.png";
 import react from "../assets/images/react-js.png";
 import next from "../assets/images/next.png";
 import me from "../assets/images/sitting.png";
+import profile1 from "../assets/images/profile1.png";
+
 import Skill from "./Skill";
+import SubHeader from "./SubHeader";
 
 export default function AboutMe() {
   const skills = [
@@ -18,41 +21,32 @@ export default function AboutMe() {
     { name: "Bootstrap" },
   ];
   return (
-    <div className="my-20 grid md:grid-cols-2" id="home">
-      <div className="flex justify-center hidden md:block">
-        <img src={me} alt="May Thu Aung" width={"60%"} className="w-[60%]" />
+    <div className="md:my-36 grid md:grid-cols-2" id="home">
+      <div className="hidden md:block">
+        <div className="flex justify-center items-center">
+          <div className="">
+            <img
+              src={profile1}
+              alt="May Thu Aung"
+              width={"100%"}
+              className="w-[100%] bg-[#D0C9FE] flex justify-center items-center rounded-full"
+            />
+          </div>
+        </div>
       </div>
-      <div>
-        <Header>May Thu Aung</Header>
+
+      <div className="flex flex-col justify-center">
+        <SubHeader>May Thu Aung</SubHeader>
         <div className="mt-5">
-          <div>
-            <h1 className="text-xl font-light text-left leading-10 body-color">
-              Full Stack Developer with 3+ years of experience in the web
-              development field, delivered many software solutions which meet
-              business requirements for various business domains. Implemented
-              projects using PHP, Laravel, and JavaScript (React, Next.js) as
-              well as SQL and RestAPI.
-            </h1>
+          <h1 className="text-5xl font-bold text-left leading-10 font-[#0D0836]">
+            Full Stack Developer with 3+ yoe
+          </h1>
 
-            <div className="my-5">
-              <div className="flex flex-wrap gap-4 items-center space-x-8">
-                {skills.map((skill) => (
-                  <Skill key={skill.name}>{skill.name}</Skill>
-                ))}
-              </div>
-
-              {/* <li>
-                  <img src={php} alt="PHP" width={50} height={50} />
-                </li>
-                <li>
-                  <img src={laravel} alt="Laravel" width={50} height={50} />
-                </li>
-                <li>
-                  <img src={react} alt="React" width={50} height={50} />
-                </li>
-                <li>
-                  <img src={next} alt="Next.js" width={50} height={50} />
-                </li> */}
+          <div className="my-10">
+            <div className="flex flex-wrap gap-4 mt-3 items-center">
+              {skills.map((skill) => (
+                <Skill key={skill.name}>{skill.name}</Skill>
+              ))}
             </div>
           </div>
         </div>

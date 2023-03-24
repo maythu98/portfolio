@@ -24,9 +24,9 @@ export default function ProjectList() {
   }, []);
 
   return (
-    <div className="my-20" id="projects">
+    <div className="my-36" id="projects">
       <Header>Projects</Header>
-      <div className="mt-10 flex flex-col gap-8">
+      <div className="mt-10 flex flex-col space-y-20">
         {projects.length > 0 &&
           projects.map((item) => (
             <ProjectBox
@@ -37,7 +37,7 @@ export default function ProjectList() {
             >
               <p className="project-desc text-desc">{item.short_desc}</p>
 
-              <div className="flex flex-wrap gap-4 items-center">
+              <div className="flex flex-wrap gap-4 mt-3 items-center">
                 {item.skills.map((skill) => (
                   <Skill key={`${skill}-${item.title}`}>{skill}</Skill>
                 ))}

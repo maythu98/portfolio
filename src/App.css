@@ -1,13 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400&display=swap");
 
 @layer base {
   :root {
-    --color-main-primary: #86092a;
+    --color-main-primary: #624cfc;
+    --color-main-primary05: #efedff;
+    --color-main-primary1: #e0dbfe;
     --color-bg-primary: #f5f4fc;
     --color-bg-content: #0a0624;
     --color-body-color: #474747;
+    --color-nav-color: #454354;
     --color-border-color: #cbc9dd;
     --color-borer: #e2dff2;
     /* ... */
@@ -15,10 +19,7 @@
 
   html {
     /* font-family: Arial, Helvetica, sans-serif; */
-    font-family: Inter var, ui-sans-serif, system-ui, -apple-system,
-      BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
-      sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
-      Noto Color Emoji;
+    font-family: "Figtree", sans-serif;
     @apply leading-[1.7];
   }
 
@@ -28,12 +29,24 @@
 }
 
 @layer components {
+  .text-main {
+    color: var(--color-main-primary);
+  }
+
+  .bg-main {
+    background-color: var(--color-main-primary);
+  }
+
   .body-color {
     @apply text-[var(--color-body-color)];
   }
 
   .nav-list--item {
-    @apply cursor-pointer hover:text-violet-600 hover:drop-shadow-sm;
+    @apply cursor-pointer text-[var(--color-nav-color)] leading-5 hover:text-[var(--color-main-primary)] hover:font-bold font-normal text-base hover:drop-shadow-sm;
+  }
+
+  .nav-list--item.active {
+    @apply text-[var(--color-main-primary)] font-bold;
   }
 
   .layout-box-shadow {
@@ -52,5 +65,9 @@
   .project-desc {
     font-size: 20px;
     @apply font-light mt-3;
+  }
+
+  .skill {
+    @apply px-5 py-1 border-b-2 border-[var(--color-main-primary1)] text-[var(--color-nav-color)] hover:border-[var(--color-main-primary)] hover:text-black;
   }
 }

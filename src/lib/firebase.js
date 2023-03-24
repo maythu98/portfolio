@@ -21,7 +21,6 @@ export const getProjects = async () => {
   //   const projectsRef = collection(db, "/projects");
   //   const projects = query(projectsRef);
   const projects = await getDocs(collection(db, "projects"));
-  console.log("promis..", projects.data);
   projects.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
     console.log(doc.data());

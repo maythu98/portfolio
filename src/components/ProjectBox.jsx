@@ -7,14 +7,14 @@ export default function ProjectBox({
   position = "right",
 }) {
   return (
-    <div className="flex flex-col md:flex-row mt-5">
+    <div className="flex flex-col md:flex-row mt-6">
       {position === "right" && (
-        <div className="project-box flex-auto flex items-center justify-center w-full md:w-[60%]">
+        <div className="project-box flex-auto flex items-center justify-center w-full md:w-[50%]">
           <img src={image} alt={title} />
         </div>
       )}
 
-      <div className="p-10 flex-auto md:w-[40%]">
+      <div className="px-10 py-2 flex-auto flex flex-col justify-center md:w-[50%]">
         <ProjectTitle>{title}</ProjectTitle>
         <div>{children}</div>
       </div>
