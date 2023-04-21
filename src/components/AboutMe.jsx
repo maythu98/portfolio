@@ -18,7 +18,11 @@ export default function AboutMe() {
   ];
 
   return (
-    <div className="min-h-[80vh] grid md:grid-cols-2" id="home">
+    <div
+      className="min-h-[95vh] grid md:grid-cols-2"
+      id="home-section"
+      data-section
+    >
       <div className="md:flex md:justify-center">
         <div className="flex justify-center md:items-center lg:items-start xl:items-center ">
           <img
@@ -36,13 +40,13 @@ export default function AboutMe() {
             A full stack developer with 3+ years of experience
           </h1>
 
-          <div className="my-10">
+          {/* <div className="my-10">
             <div className="flex flex-wrap gap-4 mt-3 items-center">
               {skills.map((skill) => (
                 <Skill key={skill.name}>{skill.name}</Skill>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -6,11 +6,12 @@
 @layer base {
   :root {
     --color-main-primary: #624cfc;
+    --color-main-primary005: #f0efff;
     --color-main-primary05: #e6e3fe;
     --color-main-primary1: #e0dbfe;
     --color-main-primary2: #c0b7fe;
     --color-main-primary3: #a194fd;
-    --color-bg-primary: #efedfc;
+    --color-bg-primary: #f3f4fd; /* #efedfc; */
     --color-bg-content: #0a0624;
     --color-body-color: #474747;
     --color-nav-color: #454354;
@@ -44,7 +45,7 @@
   }
 
   .nav-list--item {
-    @apply cursor-pointer text-[var(--color-nav-color)] leading-5 hover:text-[var(--color-main-primary)] hover:font-bold font-normal text-base hover:drop-shadow-sm;
+    @apply cursor-pointer text-[var(--color-nav-color)] leading-5 hover:text-[var(--color-main-primary)] hover:font-bold text-base hover:drop-shadow-sm;
   }
 
   .nav-list--item.active {
@@ -57,7 +58,7 @@
 
   .project-box {
     box-shadow: 0px 8px 6px -6px rgba(211, 207, 238, 0.58);
-    @apply p-5 relative rounded bg-[var(--color-main-primary1)];
+    @apply p-5 relative rounded bg-[var(--color-main-primary005)];
   }
 
   .text-desc {

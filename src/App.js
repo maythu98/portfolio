@@ -1,7 +1,6 @@
 import "./App.css";
 import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
-import Navigation from "./components/Navigation";
 import ProjectList from "./components/ProjectList";
 import DefaultLayout from "./layouts/DefaultLayout";
 

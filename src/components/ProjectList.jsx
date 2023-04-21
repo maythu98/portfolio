@@ -24,9 +24,17 @@ export default function ProjectList() {
   }, []);
 
   return (
-    <div className="my-16" id="projects">
+    <div
+      className="my-16 min-h-[95vh] text-[#0D0836]"
+      id="projects-section"
+      data-section
+    >
       <Header>My Projects</Header>
-      <div className="mt-5 flex flex-col space-y-20">
+      <div
+        className="mt-5 flex flex-col space-y-20"
+        // id="projects-section"
+        // data-section
+      >
         {projects.length > 0 &&
           projects.map((item) => (
             <ProjectBox
@@ -36,7 +44,9 @@ export default function ProjectList() {
               position="right"
               key={`${item.id}-${item.title}`}
             >
-              <p className="project-desc text-desc">{item.short_desc}</p>
+              <p className="project-desc text-desc leading-[150%]">
+                {item.short_desc}
+              </p>
 
               <div className="flex flex-wrap gap-4 mt-3 items-center">
                 {item.skills.map((skill) => (

@@ -19,7 +19,7 @@ export default function ProjectBox({
           <ProjectTitle>{title}</ProjectTitle>
           <div className=""></div>
         </div>
-        <div>{children}</div>
+        <div className="text-base font-normal leading-[150%]">{children}</div>
       </div>
       {position === "left" && (
         <div className="project-box flex-auto flex items-center justify-center md:w-[50%]">
@@ -31,5 +31,5 @@ export default function ProjectBox({
 }
 
 export function ProjectTitle({ children }) {
-  return <h2 className="font-bold text-2xl md:text-4xl">{children}</h2>;
+  return <h2 className="font-bold text-xl md:text-2xl">{children}</h2>;
 }
