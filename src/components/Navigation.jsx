@@ -1,35 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
+import NaviLink from "./NaviLink";
+import HeaderList from "./HeaderList";
+import withNavigationObserver from "./hoc/NavigationObserver";
 
-const headerList = [
-  {
-    name: "Home",
-    link: "home-section",
-  },
-  {
-    name: "Projects",
-    link: "projects-section",
-  },
-  {
-    name: "Contact Me",
-    link: "contact-section",
-  },
-];
+const NaviComponent = withNavigationObserver(HeaderList);
 
 export default function Navigation({ className, ...props }) {
   const boxRef = useRef();
-  const observer = useRef();
-  const [activeSection, setActiveSection] = useState("home-section");
-
-  const handleClick = (anchor) => {
-    const element = document.getElementById(anchor);
-    setActiveSection(anchor);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,66 +24,24 @@ export default function Navigation({ className, ...props }) {
     };
   }, []);
 
-  useEffect(() => {
-    observer.current = new IntersectionObserver((entries) => {
-      console.log("Enteries...", entries);
-      const visibleSection = entries.find(
-        (entry) => entry.isIntersecting
-      )?.target;
-      if (visibleSection) {
-        setActiveSection(visibleSection.id);
-      }
-    });
-
-    const sections = document.querySelectorAll("[data-section]");
-    sections.forEach((section) => {
-      observer.current.observe(section);
-    });
-
-    return () => {
-      sections.forEach((section) => {
-        observer.current.unobserve(section);
-      });
-    };
-  }, []);
-
   return (
-    // layout-box-shadow
     <div
       className="fixed inset-x-0 top-0 transition-transform z-40"
       ref={boxRef}
     >
       <div {...props} className="container mx-auto flex justify-between my-10">
-        {/* <h1 className="font-bold text-xl uppercase">May</h1> */}
         <nav>
-          <ul className="list-none flex space-x-8">
-            {headerList.map(({ name, link }) => (
-              <li
-                className={`nav-list--item ${
-                  activeSection === link ? "active" : ""
-                }`}
-                key={link}
-              >
-                <a href={`#${link}`} onClick={() => handleClick(link)}>
-                  {name}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <NaviComponent />
         </nav>
-        <div>
-          <ul>
-            <li className="nav-list--item">
-              <a
-                href="https://drive.google.com/file/d/1ZnBlPC21KrjTqu6M9BM8BoIKP3JYQM5I/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Resume
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul>
+          <NaviLink
+            link="https://drive.google.com/file/d/1ZnBlPC21KrjTqu6M9BM8BoIKP3JYQM5I/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume
+          </NaviLink>
+        </ul>
       </div>
     </div>
   );

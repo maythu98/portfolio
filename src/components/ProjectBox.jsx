@@ -15,9 +15,12 @@ export default function ProjectBox({
       )}
 
       <div className="px-0 md:px-10 py-2 flex-auto flex flex-col justify-center md:w-[50%]">
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <ProjectTitle>{title}</ProjectTitle>
-          <div className=""></div>
+          <div className="space-x-2">
+            <a href="#">More Detail</a>
+            <a href="#">Extrenal Link</a>
+          </div>
         </div>
         <div className="text-base font-normal leading-[150%]">{children}</div>
       </div>

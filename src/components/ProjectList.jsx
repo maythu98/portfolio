@@ -40,8 +40,8 @@ export default function ProjectList() {
             <ProjectBox
               title={item.title}
               image={item.image}
-              // position={item.position}
-              position="right"
+              position={item.position}
+              // position="right"
               key={`${item.id}-${item.title}`}
             >
               <p className="project-desc text-desc leading-[150%]">
