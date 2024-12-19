@@ -98,7 +98,7 @@ export default function Navigation({ className, ...props }) {
           <ul>
             <li className="nav-list--item">
               <a
-                href="https://drive.google.com/file/d/1ZnBlPC21KrjTqu6M9BM8BoIKP3JYQM5I/view?usp=sharing"
+                href="https://drive.google.com/file/d/1MevUuGxa5p7JkRXV_IF5aKwQsFHVskqd/view"
                 target="_blank"
                 rel="noreferrer"
               >
