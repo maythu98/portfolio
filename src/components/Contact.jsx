@@ -17,10 +17,10 @@ export default function Contact() {
         <ContactItem href="https://github.com/maythu98">
           <img src={github} alt="Github" />
         </ContactItem>
-        <ContactItem href="https://www.linkedin.com/">
+        <ContactItem href="https://www.linkedin.com/in/may-thu/">
           <img src={linkedin} alt="linkedin" />
         </ContactItem>
-        <ContactItem href="mailto:maythuaung1998.mm@gmail.com">
+        <ContactItem href="mailto:maythuaung216@gmail.com">
           <img src={google} alt="Github" />
         </ContactItem>
       </div>
