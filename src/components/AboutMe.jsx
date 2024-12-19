@@ -37,7 +37,7 @@ export default function AboutMe() {
         <SubHeader>May Thu Aung</SubHeader>
         <div className="mt-5">
           <h1 className="text-center md:text-left text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-left leading-relaxed font-[#0D0836]">
-            A full stack developer with 3+ years of experience
+            A full stack developer with 4+ years of experience
           </h1>
 
           {/* <div className="my-10">
